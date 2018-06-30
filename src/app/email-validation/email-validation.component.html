@@ -1,0 +1,13 @@
+<mat-card>
+<form #validationForm="ngForm" (ngSubmit)="validate()">
+
+  <mat-form-field>
+    <input matInput placeholder="Email address" required name="email" [(ngModel)]="emailAddress" #email>
+  </mat-form-field>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" type="submit">Validate</button>
+  </mat-card-actions>
+
+</form>
+</mat-card>

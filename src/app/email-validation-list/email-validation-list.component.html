@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>Validations</mat-card-header>
+  <mat-card-content>
+    <div *ngIf="emailValidations">
+    <mat-list>
+      <mat-list-item *ngFor="let validation of emailValidations.validations">
+        <h4 mat-line>{{validation.email}} - {{validation.score}}</h4>
+      </mat-list-item>
+    </mat-list>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="button" (click)="getPreviousPage()">Previous</button>
+        <button mat-raised-button color="primary" type="button" (click)="getNextPage()">Next</button>
+      </mat-card-actions>
+      <h4 mat-line>Page {{actualPage}} of {{emailValidations.totalPages}}</h4>
+      <h4 mat-line>Total items {{emailValidations.totalItems}}</h4>
+    </div>
+  </mat-card-content>
+</mat-card>
+
